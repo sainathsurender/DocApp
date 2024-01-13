@@ -1,0 +1,16 @@
+<!-- folder-details.component.html -->
+<div *ngIf="folderData">
+  <h3>Folder Details</h3>
+  <div>
+    <strong>Folder Name:</strong> {{ folderData.folderName }}
+  </div>
+  <div>
+    <strong>All Roles Selected:</strong> {{ folderData.selectAll }}
+  </div>
+  <div>
+    <strong>Number of Roles Selected:</strong> {{ folderData.selectedRoles.length }}
+  </div>
+  <div>
+    <strong>Number of Users Selected:</strong> {{ folderData.selectedUsers }}
+  </div>
+</div>

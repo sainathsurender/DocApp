@@ -1,0 +1,29 @@
+<!-- folder-list.component.html -->
+<div class="container mt-4">
+  <h2>Folder List</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Folder Name</th>
+        <th>Select All</th>
+        <th>Number of Roles Selected</th>
+        <th>Number of Users Selected</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let folderData of folderDataList">
+        <td>
+          <a (click)="onFolderNameClick(folderData)" style="cursor: pointer; text-decoration: underline;">
+            {{ folderData.folderName }}
+          </a>
+        </td>
+        <td>{{ folderData.selectAll }}</td>
+        <td>{{ folderData.selectedRoles.length }}</td>
+        <td>{{ folderData.selectedUsers }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <router-outlet></router-outlet>
+</div>
